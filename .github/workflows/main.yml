@@ -26,6 +26,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: fetch-env-name
     environment: ${{ needs.fetch-env-name.outputs.env_name }}
+    env: 
+      MY_NAME: ${{ env.MY_NAME }}
+
     steps:
       - name:
         run: |
