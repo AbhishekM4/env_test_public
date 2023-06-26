@@ -1,6 +1,6 @@
 name: Test variable environment
 on:
-  push:
+  pull_request:
     branches:
       - "main"
 jobs:
