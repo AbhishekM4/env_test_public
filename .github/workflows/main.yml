@@ -22,6 +22,7 @@ jobs:
           else
              echo "Undefined envs"
           fi     
+          exit 1
   deploy:
     runs-on: ubuntu-latest
     needs: fetch-env-name
@@ -32,4 +33,3 @@ jobs:
         run: |
           echo ${{ needs.fetch-env-name.outputs.env_name }}
           echo ${{ vars.MY_NAME }}
-          exit 1
